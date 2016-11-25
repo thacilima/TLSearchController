@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="TLSearchController" customModuleProvider="target">
+            <connections>
+                <outlet property="navigationBar" destination="zfS-i6-HyW" id="4sj-mh-1nx"/>
+                <outlet property="navigationBarHeightLayoutConstraint" destination="ic5-Us-F2i" id="0pg-Va-QgP"/>
+                <outlet property="searchAutoCompleteTableView" destination="0F0-Gx-1NG" id="Ssy-tZ-yaN"/>
+                <outlet property="searchTextField" destination="ZpC-RD-2Ht" id="t56-f2-07y"/>
+                <outlet property="view" destination="iN0-l3-epB" id="fib-Jv-La1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfS-i6-HyW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="ic5-Us-F2i"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="Title" id="ghV-UV-rRm">
+                            <barButtonItem key="leftBarButtonItem" title="Cancelar" id="ltE-os-8ga">
+                                <connections>
+                                    <action selector="cancelSearch" destination="-1" id="5Wm-BS-hhV"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0F0-Gx-1NG">
+                    <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="NuZ-LB-88z"/>
+                        <outlet property="delegate" destination="-1" id="YBT-Hn-QfE"/>
+                    </connections>
+                </tableView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZpC-RD-2Ht">
+                    <rect key="frame" x="8" y="72" width="359" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="38i-zj-vub"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ZpC-RD-2Ht" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="7CW-Gi-hvk"/>
+                <constraint firstItem="zfS-i6-HyW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AO6-7J-5cL"/>
+                <constraint firstItem="0F0-Gx-1NG" firstAttribute="top" secondItem="ZpC-RD-2Ht" secondAttribute="bottom" constant="8" id="RtM-qa-qTv"/>
+                <constraint firstItem="zfS-i6-HyW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Voq-b4-srR"/>
+                <constraint firstItem="0F0-Gx-1NG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ejj-7i-2JO"/>
+                <constraint firstAttribute="trailing" secondItem="0F0-Gx-1NG" secondAttribute="trailing" id="qHE-2G-KDj"/>
+                <constraint firstAttribute="trailing" secondItem="ZpC-RD-2Ht" secondAttribute="trailing" constant="8" id="uzk-P0-KGk"/>
+                <constraint firstItem="ZpC-RD-2Ht" firstAttribute="top" secondItem="zfS-i6-HyW" secondAttribute="bottom" constant="8" id="xD0-lW-a2q"/>
+                <constraint firstAttribute="trailing" secondItem="zfS-i6-HyW" secondAttribute="trailing" id="y3P-lt-zlu"/>
+                <constraint firstAttribute="bottom" secondItem="0F0-Gx-1NG" secondAttribute="bottom" id="zKe-MA-yrb"/>
+            </constraints>
+            <point key="canvasLocation" x="26.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

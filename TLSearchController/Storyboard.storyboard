@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jY2-ag-YlZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="QsK-zN-TRB">
+            <objects>
+                <viewController id="jY2-ag-YlZ" customClass="ViewController" customModule="TLSearchController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xb1-l9-2fr"/>
+                        <viewControllerLayoutGuide type="bottom" id="EJW-xp-F9B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pYO-Jq-6l4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orange" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmi-LC-0va">
+                                <rect key="frame" x="159" y="65" width="57" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fOB-zA-PEJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available fruits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRZ-Sj-Mnn">
+                                <rect key="frame" x="100.5" y="28" width="174.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Cgw-HF-LhY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watermelon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ef-9F-B5M">
+                                <rect key="frame" x="141" y="94" width="93" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="7Gk-61-FUe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banana" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="had-Db-fGc">
+                                <rect key="frame" x="159" y="123" width="57" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="T9Q-fc-JZA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfN-jM-68q">
+                                <rect key="frame" x="142" y="318.5" width="91" height="30"/>
+                                <state key="normal" title="Search Fruits"/>
+                                <connections>
+                                    <action selector="searchFruits:" destination="jY2-ag-YlZ" eventType="touchUpInside" id="dcW-2l-PHi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCq-Ez-BsB">
+                                <rect key="frame" x="125" y="356.5" width="124" height="30"/>
+                                <state key="normal" title="Search in popover"/>
+                                <connections>
+                                    <action selector="searchFruitsInPopover:" destination="jY2-ag-YlZ" eventType="touchUpInside" id="xpp-cX-AI2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mRZ-Sj-Mnn" firstAttribute="top" secondItem="xb1-l9-2fr" secondAttribute="bottom" constant="8" id="4hx-PU-hS8"/>
+                            <constraint firstItem="3ef-9F-B5M" firstAttribute="leading" secondItem="pYO-Jq-6l4" secondAttribute="leadingMargin" constant="125" id="8zP-aj-fBK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3ef-9F-B5M" secondAttribute="trailing" constant="125" id="MfS-3K-I31"/>
+                            <constraint firstItem="Wmi-LC-0va" firstAttribute="centerX" secondItem="pYO-Jq-6l4" secondAttribute="centerX" id="OxJ-hB-xWQ"/>
+                            <constraint firstItem="OCq-Ez-BsB" firstAttribute="centerX" secondItem="pYO-Jq-6l4" secondAttribute="centerX" id="RUq-lS-OqW"/>
+                            <constraint firstItem="mRZ-Sj-Mnn" firstAttribute="centerX" secondItem="pYO-Jq-6l4" secondAttribute="centerX" id="Sex-Lw-Be5"/>
+                            <constraint firstItem="had-Db-fGc" firstAttribute="centerX" secondItem="pYO-Jq-6l4" secondAttribute="centerX" id="SzV-ER-1tL"/>
+                            <constraint firstItem="Wmi-LC-0va" firstAttribute="top" secondItem="mRZ-Sj-Mnn" secondAttribute="bottom" constant="16" id="e89-dq-LDX"/>
+                            <constraint firstItem="had-Db-fGc" firstAttribute="top" secondItem="3ef-9F-B5M" secondAttribute="bottom" constant="8" id="hQx-wR-lPi"/>
+                            <constraint firstItem="gfN-jM-68q" firstAttribute="centerY" secondItem="pYO-Jq-6l4" secondAttribute="centerY" id="huP-CF-Zzu"/>
+                            <constraint firstItem="OCq-Ez-BsB" firstAttribute="top" secondItem="gfN-jM-68q" secondAttribute="bottom" constant="8" id="kKj-b1-WGr"/>
+                            <constraint firstItem="3ef-9F-B5M" firstAttribute="top" secondItem="Wmi-LC-0va" secondAttribute="bottom" constant="8" id="kpw-MV-Rti"/>
+                            <constraint firstItem="gfN-jM-68q" firstAttribute="centerX" secondItem="pYO-Jq-6l4" secondAttribute="centerX" id="leX-Kc-cre"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8H9-zJ-0ko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.600000000000001" y="148.87556221889056"/>
+        </scene>
+    </scenes>
+</document>
