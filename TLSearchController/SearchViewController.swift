@@ -196,7 +196,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if searchResult.count == 0 {
+        if searchResult.count == 0 && (!addObjectOption || (addObjectOption && searchTextField.text!.isEmpty)) {
             tableView.isHidden = true
         }
         else {
